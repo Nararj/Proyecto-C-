@@ -12,11 +12,11 @@
 
 	1.- Inicializar vector/lista para guardar plantas.
 	2.- Mostrar menú principal:
-    2.1.- Agregar nueva planta
-    2.2.- Mostrar información de todas las plantas
-    2.3.- Regar todas las plantas
-    2.4.- Realizar acción específica por tipo
-    2.5.- Salir
+    	2.1.- Agregar nueva planta
+    	2.2.- Mostrar información de todas las plantas
+    	2.3.- Regar todas las plantas
+    	2.4.- Realizar acción específica por tipo
+    	2.5.- Salir
 
 *SALIDAS*
 - Confirmación de creación de planta
