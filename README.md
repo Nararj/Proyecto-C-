@@ -21,4 +21,3 @@
 *SALIDAS*
 - Confirmación de creación de planta
 - Información de cada planta
-- 
