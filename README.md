@@ -21,3 +21,6 @@
 *SALIDAS*
 - Confirmación de creación de planta
 - Información de cada planta
+
+*CORRECCIONES*
+- Se separaron los archivos en plantaComestible, plantaDecorativa, Arbol, Planta, Jardin, Cuidados y se agrego un main
