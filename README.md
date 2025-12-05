@@ -23,7 +23,7 @@
 - Compilar todos los archivos juntos usando un compilador de C++
 	- g++ main.cpp  -o main.exe
 - Ejecutar el programa resultante: (en Windows, Linux o IOs)
-	- /main.exe
+	- ./main.exe
 
 *CORRECCIONES*
 - Se separaron los archivos en plantaComestible, plantaDecorativa, Arbol, Planta, Jardin, Cuidados y se agrego un main
