@@ -14,7 +14,6 @@
 **PARA QUE NO SIRVE**
 - No realiza gestión real de un jardín físico.
 - No almacena información en archivos o bases de datos.
-- No realiza cálculos de crecimiento, riego o fertilización.
 - No incluye interfaz gráfica; solo funciona por consola.
 
 **COMO USARLO**
