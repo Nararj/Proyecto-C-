@@ -19,15 +19,9 @@
 **COMO USARLO**
 - Abrir todos los archivos .cpp en un proyecto de C++ (Planta.cpp, PlantaDecorativa.cpp, PlantaComestible.cpp, Arbol.cpp, Jardin.cpp, main.cpp)
 - Abrir una terminal o consola y navegar a la carpeta donde están los archivos
-- Compilar todos los archivos juntos usando un compilador de C++
+- Compilar todos los archivos juntos usando un compilador de C++ y ejecutar el programa resultante (en Windows y Linux)
 	- g++ main.cpp  -o main.exe
-- Ejecutar el programa resultante (en Windows) 
-	- ./main.exe
-- Ejecutar el programa resultante (en Linux)
 	- /.main.exe
-- Ejecutar el programa resultante (en IOs)
+- Compilar todos los archivos juntos usando un compilador de C++ y ejecutar el programa resultante (en IOs)
 	- g++ main.cpp  -o main.o
 	- ./main.o
-
-*CORRECCIONES*
-- Se separaron los archivos en plantaComestible, plantaDecorativa, Arbol, Planta, Jardin, Cuidados y se agrego un main
