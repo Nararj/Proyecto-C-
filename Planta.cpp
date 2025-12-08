@@ -1,47 +1,73 @@
-#ifndef PLANTA_H
-#define PLANTA_H
+/*
+ * Descripcion: Clase base Planta que representa una planta generica
+ * Autor: Narayana Rajaram Lopez | A01714315
+ * Fecha: 07/12/2025
+ */
 
+#pragma once
 #include <iostream>
 #include <string>
-#include "Cuidados.cpp"
 using namespace std;
 
 class Planta {
-protected:
+private:
     string nombre;
-    float altura; // en cm
-    Cuidados cuidados; // Composición
+    string tipo;
 
 public:
-    Planta() {
-        nombre = "Sin nombre";
-        altura = 0;
+    /*
+     * Constructor de la clase Planta
+     * Parametros:
+     *   nombre: nombre de la planta
+     *   tipo: tipo de la planta
+     */
+    Planta(string nombre, string tipo) : nombre(nombre), tipo(tipo) {
     }
 
-    Planta(string n, float h, Cuidados c) : cuidados(c) {
-        nombre = n;
-        altura = h;
+    /*
+     * Establece el nombre de la planta
+     * Parametros:
+     *   nombre: nuevo nombre de la planta
+     * Retorno: void
+     */
+    void setNombre(string nombre) {
+        this->nombre = nombre;
     }
 
-    // Getters
-    string getNombre() { return nombre; }
-    float getAltura() { return altura; }
-    Cuidados getCuidados() { return cuidados; }
+    /*
+     * Establece el tipo de la planta
+     * Parametros:
+     *   tipo: nuevo tipo de la planta
+     * Retorno: void
+     */
+    void setTipo(string tipo) {
+        this->tipo = tipo;
+    }
 
-    // Setters
-    void setNombre(string n) { nombre = n; }
-    void setAltura(float h) { altura = h; }
-    void setCuidados(Cuidados c) { cuidados = c; }
+    /*
+     * Obtiene el nombre de la planta
+     * Parametros: ninguno
+     * Retorno: nombre de la planta como string
+     */
+    string getNombre() {
+        return nombre;
+    }
 
+    /*
+     * Obtiene el tipo de la planta
+     * Parametros: ninguno
+     * Retorno: tipo de la planta como string
+     */
+    string getTipo() {
+        return tipo;
+    }
+
+    /*
+     * Muestra la informacion de la planta
+     * Parametros: ninguno
+     * Retorno: void
+     */
     virtual void mostrarInfo() {
-        cout << "Nombre: " << nombre << endl;
-        cout << "Altura: " << altura << " cm" << endl;
-        cuidados.mostrarCuidados();
-    }
-
-    virtual void regar() {
-        cout << nombre << " ha sido regada." << endl;
+        cout << "Planta: " << nombre << " ( " << tipo << " ) " << endl;
     }
 };
-
-#endif

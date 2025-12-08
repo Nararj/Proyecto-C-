@@ -1,32 +1,36 @@
+/*
+ * Descripcion: Programa principal que demuestra el uso de clases de plantas
+ * Autor: Narayana Rajaram Lopez | A01714315
+ * Fecha: 07/12/2025
+ */
+
+
+#include <iostream>
+using namespace std;
+
 #include "PlantaDecorativa.cpp"
 #include "PlantaComestible.cpp"
 #include "Arbol.cpp"
 #include "Jardin.cpp"
-#include <iostream>
-using namespace std;
 
+/*
+ * Funcion principal del programa
+ * Crea objetos de plantas, los agrega a un jardin y muestra su informacion
+ * Parametros: ninguno
+ * Retorno: 0 si el programa termina correctamente
+ */
 int main() {
 
-    Cuidados c1("Poco", "Alta", "Rara vez");
-    Cuidados c2("Moderado", "Media", "Mensual");
-    Cuidados c3("Constante", "Baja", "Semanal");
+    PlantaDecorativa decorativa("Rosa", "Rojo");
+    PlantaComestible comestible("Zanahoria", "Raiz");
+    Arbol arbol("Roble", 12);
 
-    PlantaDecorativa rosa("Rosa", 50, c1, "Rojo");
-    PlantaComestible tomate("Tomate", 30, c2);
-    Arbol roble("Roble", 300, c3);
-
-    Jardin jardin("Mi Jardin");
-
-    jardin.agregarPlanta(&rosa);
-    jardin.agregarPlanta(&tomate);
-    jardin.agregarPlanta(&roble);
+    Jardin jardin;
+    jardin.agregarPlanta(&decorativa);
+    jardin.agregarPlanta(&comestible);
+    jardin.agregarPlanta(&arbol);
 
     jardin.mostrarPlantas();
-
-    // Demostración de métodos específicos
-    rosa.podar();
-    tomate.cosechar();
-    roble.podarAltura();
 
     return 0;
 }

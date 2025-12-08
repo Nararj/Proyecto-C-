@@ -1,33 +1,55 @@
-#ifndef PLANTA_DECORATIVA_H
-#define PLANTA_DECORATIVA_H
+/*
+ * Descripcion: Clase PlantaDecorativa que hereda de Planta
+ * Autor: Narayana Rajaram Lopez | A01714315
+ * Fecha: 07/12/2025
+ */
 
-#include "Planta.cpp"
+#pragma once
+#include <iostream>
 #include <string>
 using namespace std;
 
+#include "Planta.cpp"
+
 class PlantaDecorativa : public Planta {
 private:
-    string colorFlor;
+    string color;
 
 public:
-    PlantaDecorativa() : Planta() { colorFlor = "Desconocido"; }
-
-    PlantaDecorativa(string n, float h, Cuidados c, string color) : Planta(n, h, c) {
-        colorFlor = color;
+    /*
+     * Constructor de la clase PlantaDecorativa
+     * Parametros:
+     *   nombre: nombre de la planta decorativa
+     *   color: color de la planta decorativa
+     */
+    PlantaDecorativa(string nombre, string color) : Planta(nombre, "Decorativa"), color(color) {
     }
 
-    // Getters / Setters
-    string getColorFlor() { return colorFlor; }
-    void setColorFlor(string color) { colorFlor = color; }
-
-    void podar() {
-        cout << nombre << " ha sido podada. Color de flor: " << colorFlor << endl;
+    /*
+     * Establece el color de la planta decorativa
+     * Parametros:
+     *   color: nuevo color de la planta
+     * Retorno: void
+     */
+    void setColor(string color) {
+        this->color = color;
     }
 
+    /*
+     * Obtiene el color de la planta decorativa
+     * Parametros: ninguno
+     * Retorno: color de la planta como string
+     */
+    string getColor() {
+        return color;
+    }
+
+    /*
+     * Muestra la informacion de la planta decorativa
+     * Parametros: ninguno
+     * Retorno: void
+     */
     void mostrarInfo() override {
-        Planta::mostrarInfo();
-        cout << "Color de la flor: " << colorFlor << endl;
+        cout << "Planta Decorativa: " << getNombre() << ", Color: " << color << endl;
     }
 };
-
-#endif
